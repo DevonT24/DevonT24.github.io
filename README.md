@@ -1,2 +1,3 @@
 # DevonT24.github.io
-my first website
+
+Old HTML tutorial I copied is deleted, I am making a blog from scratch.
