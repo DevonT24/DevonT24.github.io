@@ -1,0 +1,17 @@
+h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+} 
+
+h3 {
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+} 
+
+#blog-post {
+    margin: 20px;
+    padding: 10px;
+    color: #cccccc;
+} 

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body id="main-body" style="background-color: #1a1a1a;">
 
     <div style="text-align: right; padding: 10px;">
@@ -17,19 +20,19 @@
     <div style="display: flex;">
         <!--This div is for blog entries-->
         <div style="flex: 3; margin: 20px; padding: 10px;">
-            <h2 id="blog-title" style="color: #ffffff;">Blog Entries</h2>
+            <h2 id="blog-title">Blog Entries</h2>
             <!--This div is for entry 1-->
-            <div id="blog-post" style="margin: 20px; padding: 10 px; color: #cccccc;">
-                <h3 id="blog-post-title" style="color: #e0e0e0;">Entry 1</h3>
+            <div id="blog-post">
+                <h3 id="blog-post-title">Entry 1</h3>
                 <p>This is where the blog post will go.</p>
             </div>
         </div>
 
         <!--This div is for the right-hand sidebar-->
         <div style="flex: 1; text-align: right; margin: 20px; padding: 10px;">
-            <h2 id = "contact-me" style="color: #ffffff;">Contact Me!</h2>
-            <h3 id = "email-title" style="color: #e0e0e0;">Email:</h3>
-            <p><a id = "email-link" href="mailto:devontroester@gmail.com" style="color: #7cc5ff;">devontroester@gmail.com</a></p>
+            <h2 id="contact-me">Contact Me!</h2>
+            <h3 id="email-title">Email:</h3>
+            <p><a id="email-link" href="mailto:devontroester@gmail.com" style="color: #7cc5ff;">devontroester@gmail.com</a></p>
         </div>
     </div>
 
@@ -38,34 +41,28 @@
         let isDarkMode = true;
         
         function toggleDarkMode() {
-            isDarkMode = !isDarkMode
+            isDarkMode = !isDarkMode;
 
             const body = document.getElementById("main-body");
+            const h2Elements = document.querySelectorAll('h2');
+            const h3Elements = document.querySelectorAll('h3');
             const title = document.getElementById("header-title");
-            const blogTitle = document.getElementById("blog-title");
             const blogPost = document.getElementById("blog-post");
-            const blogPostTitle = document.getElementById("blog-post-title");
-            const contactMe = document.getElementById("contact-me");
-            const emailTitle = document.getElementById("email-title");
             const emailLink = document.getElementById("email-link");
             
             if (isDarkMode) {
                 body.style.backgroundColor = '#1a1a1a';
+                h2Elements.forEach(h2 => h2.style.color = '#ffffff');
+                h3Elements.forEach(h3 => h3.style.color = '#e0e0e0');
                 title.style.color = '#ffffff';
-                blogTitle.style.color = '#ffffff';
                 blogPost.style.color = '#cccccc';
-                blogPostTitle.style.color = '#e0e0e0';
-                contactMe.style.color = '#ffffff';
-                emailTitle.style.color = '#e0e0e0';
                 emailLink.style.color = '#7cc5ff';
             } else {
                 body.style.backgroundColor = '#ffffff';
+                h2Elements.forEach(h2 => h2.style.color = '#000000');
+                h3Elements.forEach(h3 => h3.style.color = '#333333');
                 title.style.color = '#000000';
-                blogTitle.style.color = '#000000';
                 blogPost.style.color = '#000000';
-                blogPostTitle.style.color = '#333333';
-                contactMe.style.color = '#000000';
-                emailTitle.style.color = '#333333';
                 emailLink.style.color = '#0066cc';
             }
         }
