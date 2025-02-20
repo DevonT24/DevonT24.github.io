@@ -1,11 +1,11 @@
 :root {
-    /* Light mode colors (default) */
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --heading-color: #000000;
-    --subheading-color: #333333;
-    --link-color: #0066cc;
-    --blog-text-color: #000000;
+    /* Softer light mode colors */
+    --bg-color: #f5f5f5;        /* Light gray background instead of pure white */
+    --text-color: #2d2d2d;      /* Softer black for general text */
+    --heading-color: #2d2d2d;   /* Matching softer black for headings */
+    --subheading-color: #4a4a4a; /* Slightly lighter than main headings */
+    --link-color: #2b7bb9;      /* Softer blue for links */
+    --blog-text-color: #2d2d2d; /* Matching text color */
 }
 
 [data-theme="dark"] {
