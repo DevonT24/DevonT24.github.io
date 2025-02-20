@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body id="main-body" style="background-color: #1a1a1a;">
+<body id="main-body">
 
     <div style="text-align: right; padding: 10px;">
         <button onclick="toggleDarkMode()" style="padding: 8px; border-radius: 5px; cursor: pointer;">
@@ -38,34 +38,15 @@
 
     <!--Dark Mode Button!-->
     <script>
-        let isDarkMode = true;
+        let isDarkMode = false;
         
         function toggleDarkMode() {
             isDarkMode = !isDarkMode;
-
-            const body = document.getElementById("main-body");
-            const h2Elements = document.querySelectorAll('h2');
-            const h3Elements = document.querySelectorAll('h3');
-            const title = document.getElementById("header-title");
-            const blogPost = document.getElementById("blog-post");
-            const emailLink = document.getElementById("email-link");
-            
-            if (isDarkMode) {
-                body.style.backgroundColor = '#1a1a1a';
-                h2Elements.forEach(h2 => h2.style.color = '#ffffff');
-                h3Elements.forEach(h3 => h3.style.color = '#e0e0e0');
-                title.style.color = '#ffffff';
-                blogPost.style.color = '#cccccc';
-                emailLink.style.color = '#7cc5ff';
-            } else {
-                body.style.backgroundColor = '#ffffff';
-                h2Elements.forEach(h2 => h2.style.color = '#000000');
-                h3Elements.forEach(h3 => h3.style.color = '#333333');
-                title.style.color = '#000000';
-                blogPost.style.color = '#000000';
-                emailLink.style.color = '#0066cc';
-            }
+            document.body.dataset.theme = isDarkMode ? 'dark' : 'light';
         }
+
+        // Initialize dark mode on page load
+        document.body.dataset.theme = 'dark';
     </script>
 </body>
 </html>
